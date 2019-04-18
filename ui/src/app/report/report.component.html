@@ -1,0 +1,12 @@
+<div class="container typetwo">
+
+  <div class="col">
+    <br>
+    <p>List of items borrowed from the library: </p>
+
+    <p *ngFor="let book of bookList">Borrow Date: {{book.burrowDate}} Book:{{book.title}}</p>
+    <p *ngFor="let dvd of dvdList">Borrow Date: {{dvd.burrowDate}} DVD:{{dvd.title}}</p>
+
+  </div>
+
+</div>

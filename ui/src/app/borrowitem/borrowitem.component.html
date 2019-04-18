@@ -1,0 +1,73 @@
+<div class="container typetwo">
+
+  <div class="col">
+    <p class="sm">Borrow an item from the Library</p>
+    <br>
+    <p>Select the item type you want to borrow: </p>
+    <form>
+      <input type="button" class="button" value="Borrow Book" (click)="book=true;dvd=false;borrowedDVD=false">
+      <input type="button" class="button" value="Borrow DVD" (click)="dvd=true;book=false;borrowedBook=false">
+    </form>
+    <div *ngIf="book">
+      <form>
+        <p>ISBN:</p>
+        <input type ="text" class="txt" name="bookISBN" placeholder="ISBN of the book"  [(ngModel)]="bookISBN" required>
+        <p>Borrower's Name:</p>
+        <input type ="text" class="txt" name="borrower" placeholder="Borrower's Name"  [(ngModel)]="borrower" required>
+        <p>Mobile number:</p>
+        <input type ="text" class="txt" name="mobileNo" placeholder="Borrower's Mobile Number" [(ngModel)]="mobileNo" required>
+        <p>Email:</p>
+        <input type ="text" class="txt" name="email" placeholder="Borrower's E-mail" [(ngModel)]="email" required>
+        <p>Borrow Date: </p>
+        <input type ="text" class="txt" name="borrowDate" placeholder="dd/mm/yyyy" [(ngModel)]="borrowDate" required>
+        <p>Borrow Time:</p>
+        <input type ="text" class="txt" name="borrowTime" placeholder="hh:mm" [(ngModel)]="borrowTime" required>
+
+        <input type="submit" class="btn" value="Borrow Book" (click)="borrowBook()">
+      </form>
+    </div>
+
+    <div *ngIf="dvd">
+      <form>
+        <p>DVD id:</p>
+        <input type ="text" class="txt" name="dvdID" placeholder="Sector" [(ngModel)]="dvdID" required>
+        <p>Borrower's Name:</p>
+        <input type ="text" class="txt" name="borrower" placeholder="Borrower's Name"  [(ngModel)]="borrower" required>
+        <p>Mobile number:</p>
+        <input type ="text" class="txt" name="mobileNo" placeholder="Borrower's Mobile Number" [(ngModel)]="mobileNo" required>
+        <p>Email:</p>
+        <input type ="text" class="txt" name="email" placeholder="Borrower's E-mail" [(ngModel)]="email" required>
+        <p>Borrow Date: </p>
+        <input type ="text" class="txt" name="borrowDate" placeholder="dd/mm/yyyy" [(ngModel)]="borrowDate" required>
+        <p>Borrow Time:</p>
+        <input type ="text" class="txt" name="borrowTime" placeholder="hh:mm" [(ngModel)]="borrowTime" required>
+
+        <input type="submit" class="btn" value="Borrow DVD" (click)="borrowDVD()">
+      </form>
+    </div>
+  </div>
+  <div class="col">
+
+    <p class="item-container" *ngIf="borrowedBook">Burrowed book details:
+      <br>ISBN:{{borrowedBookISBN}}
+      <br>Sector:{{borrowedBookSector}}
+      <br>Title:{{borrowedBookTitle}}
+      <br>Authors:{{borrowedBookAuthors}}
+      <br>Pages:{{borrowedBookPages}}
+      <br>Publisher:{{borrowedBookPublisher}}
+
+
+    </p>
+    <p class="item-container" *ngIf="borrowedDVD">Burrowed DVD details:
+      <br>dvdID:{{borrowedDVDID}}
+      <br>Sector:{{borrowedDVDSector}}
+      <br>Title:{{borrowedDVDTitle}}
+      <br>Language:{{borrowedDVDLang}}
+      <br>Subtitles:{{borrowedDVDSubt}}
+      <br>Producer:{{borrowedDVDProd}}
+      <br>Actors:{{borrowedDVDActors}}
+
+    </p>
+
+  </div>
+</div>

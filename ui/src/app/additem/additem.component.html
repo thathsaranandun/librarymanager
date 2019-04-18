@@ -1,0 +1,53 @@
+<div class="container typetwo">
+
+<div class="col">
+  <p class="sm">Fill the form below to add a book to the Library</p>
+  <br>
+  <p>Select the item type you want to add: </p>
+  <form>
+    <input type="button" class="button" value="Add Book" (click)="book=true;dvd=false">
+    <input type="button" class="button" value="Add DVD" (click)="dvd=true;book=false">
+  </form>
+<div *ngIf="book">
+  <form>
+    <p>ISBN:</p>
+    <input type ="text" class="txt" name="bookSector" placeholder="Sector"  [(ngModel)]="bookISBN" required>
+    <p>Sector:</p>
+    <input type ="text" class="txt" name="bookSector" placeholder="Sector"  [(ngModel)]="bookSector" required>
+    <p>Title:</p>
+    <input type ="text" class="txt" name="bookTitle" placeholder="Title" [(ngModel)]="bookTitle" required>
+    <p>Author(s):</p>
+    <input type ="text" class="txt" name="bookAuthors" placeholder="Author(Separate authors with a , if there is more than 1 author)" [(ngModel)]="bookAuthors" required>
+    <p>No. of Pages: </p>
+    <input type ="text" class="txt" name="bookPages" placeholder="No. of pages" [(ngModel)]="bookPages" required>
+    <p>Publisher:</p>
+    <input type ="text" class="txt" name="bookPublisher" placeholder="Publisher" [(ngModel)]="bookPublisher" required>
+
+    <input type="submit" class="btn" value="Add Book" (click)="addBook()">
+  </form>
+</div>
+
+  <div *ngIf="dvd">
+    <form>
+      <p>Sector:</p>
+      <input type ="text" class="txt" name="dvdSector" placeholder="Sector" [(ngModel)]="dvdSector" required>
+      <p>Title: </p>
+      <input type ="text" class="txt" name="dvdTitle" placeholder="Title" [(ngModel)]="dvdTitle" required>
+      <p>Language:</p>
+      <input type ="text" class="txt" name="dvdLanguage" placeholder="Language" [(ngModel)]="dvdLanguage" required>
+      <p>Subtitles: </p>
+      <input type ="text" class="txt" name="dvdSubtitles" placeholder="Subtitles" [(ngModel)]="dvdSubtitles" required>
+      <p>Producer:</p>
+      <input type ="text" class="txt" name="dvdProducer" placeholder="Producer" [(ngModel)]="dvdProducer" required>
+      <p>Actors:</p>
+      <input type ="text" class="txt" name="dvdActors" placeholder="Actors" [(ngModel)]="dvdActors" required>
+
+      <input type="submit" class="btn" value="Add DVD" (click)="addDVD()">
+    </form>
+  </div>
+
+
+
+
+</div>
+</div>

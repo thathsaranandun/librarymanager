@@ -1,0 +1,51 @@
+<div class="container typetwo">
+
+  <div class="col">
+    <br>
+    <p>Select the item type you want to search: </p>
+    <form>
+      <input type="button" class="button" value="Search Book" (click)="book=true;dvd=false;searchedDVD=false">
+      <input type="button" class="button" value="Search DVD" (click)="dvd=true;book=false;searchedBook=false">
+    </form>
+    <div *ngIf="book">
+      <form>
+        <p>Book Title:</p>
+        <input type ="text" class="txt" name="bookTitle" placeholder="Title of the book you want to search"  [(ngModel)]="searchBookTitle" required>
+
+        <input type="submit" class="btn" value="Search Book" (click)="searchBook()">
+      </form>
+    </div>
+
+    <div *ngIf="dvd">
+      <form>
+        <p>DVD Title:</p>
+        <input type ="text" class="txt" name="dvdTitle" placeholder="Title of the DVD you want to search" [(ngModel)]="searchDVDTitle" required>
+
+        <input type="submit" class="btn" value="Search DVD" (click)="searchDVD()">
+      </form>
+    </div>
+  </div>
+  <div class="col">
+
+    <p class="item-container" *ngIf="searchedBook">Book details:
+      <br>ISBN:{{bookISBN}}
+      <br>Sector:{{bookSector}}
+      <br>Title:{{bookTitle}}
+      <br>Authors:{{bookAuthors}}
+      <br>Pages:{{bookPages}}
+      <br>Publisher:{{bookPublisher}}
+
+
+    </p>
+    <p class="item-container" *ngIf="searchedDVD">DVD details:
+      <br>Sector:{{dvdSector}}
+      <br>Title:{{dvdTitle}}
+      <br>Language:{{dvdLang}}
+      <br>Subtitles:{{dvdSubt}}
+      <br>Producer:{{dvdProd}}
+      <br>Actors:{{dvdActors}}
+
+    </p>
+
+  </div>
+</div>

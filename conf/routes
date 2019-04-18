@@ -1,0 +1,55 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Serve index page from public directory
+GET     /                           controllers.FrontendController.index()
+
+# An example route (Prefix all API routes with apiPrefix defined in application.conf)
+GET     /api/summary                controllers.HomeController.appSummary
+
+# Serve static assets under public directory
+GET     /*file                      controllers.FrontendController.assetOrDefault(file)
+
+# Book post request
+POST    /api/postBook               controllers.HomeController.postBook()
+
+# DVD post request
+POST    /api/postDVD                controllers.HomeController.postDVD()
+
+# Borrow book post request
+POST    /api/borrowBook             controllers.HomeController.borrowBook()
+
+#Borrow dvd post request
+POST    /api/borrowDVD              controllers.HomeController.borrowDVD()
+
+#Delete book post request
+POST    /api/deleteBook             controllers.HomeController.deleteBook()
+
+#Delete DVD post request
+POST    /api/deleteDVD             controllers.HomeController.deleteDVD()
+
+#Search Book post request
+POST    /api/searchBook             controllers.HomeController.searchBook()
+
+#Search DVD post request
+POST    /api/searchDVD              controllers.HomeController.searchDVD()
+
+#Display all books post request
+POST    /api/displayBooks           controllers.HomeController.loadBooks()
+
+#Display all dvds post request
+POST    /api/displayDVDs            controllers.HomeController.loadDVDs()
+
+#return book post request
+POST    /api/returnBook             controllers.HomeController.returnBook()
+
+#return dvd post request
+POST    /api/returnDVD              controllers.HomeController.returnDVD()
+
+#generate book report post request
+POST    /api/reportBooks            controllers.HomeController.reportBooks()
+
+#generate dvd report post request
+POST    /api/reportDVDs             controllers.HomeController.reportDVDs()
+

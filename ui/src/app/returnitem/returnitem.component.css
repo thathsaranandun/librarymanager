@@ -1,0 +1,56 @@
+.container{
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+
+.col{
+  padding: 1em 1.3em;
+}
+
+.typeone{
+  background: #4d2600;
+}
+
+.typetwo{
+  background: #f2f2f2;
+  color:black;
+}
+
+input.txt{
+  border: 0;
+  padding: 1em;
+  width: 80%;
+  margin-bottom: 2em;
+}
+
+input.btn{
+  border: 0;
+  display: block;
+  padding: 1em 3em;
+  background: #cccccc;
+  color: #003a61;
+  margin-bottom: 1em;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+
+.item-container{
+  background: #e67300;
+  padding: .5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button {
+  background-color: #595959;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}

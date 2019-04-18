@@ -1,0 +1,37 @@
+<div class="container typetwo">
+
+  <div class="col">
+    <p class="sm">Return an item to the Library</p>
+    <br>
+    <p>Select the item type you want to return: </p>
+    <form>
+      <input type="button" class="button" value="Return Book" (click)="book=true;dvd=false;">
+      <input type="button" class="button" value="Return DVD" (click)="dvd=true;book=false;">
+    </form>
+    <div *ngIf="book">
+      <form>
+        <p>ISBN:</p>
+        <input type ="text" class="txt" name="bookISBN" placeholder="ISBN of the book"  [(ngModel)]="bookISBN" required>
+        <p>Return Date: </p>
+        <input type ="text" class="txt" name="returnDate" placeholder="dd/mm/yyyy" [(ngModel)]="returnDate" required>
+        <p>Return Time:</p>
+        <input type ="text" class="txt" name="returnTime" placeholder="hh:mm" [(ngModel)]="returnTime" required>
+
+        <input type="submit" class="btn" value="Return Book" (click)="returnBook()">
+      </form>
+    </div>
+
+    <div *ngIf="dvd">
+      <form>
+        <p>DVD id:</p>
+        <input type ="text" class="txt" name="dvdID" placeholder="Sector" [(ngModel)]="dvdID" required>
+        <p>Return Date: </p>
+        <input type ="text" class="txt" name="returnDate" placeholder="dd/mm/yyyy" [(ngModel)]="returnDate" required>
+        <p>Return Time:</p>
+        <input type ="text" class="txt" name="returnTime" placeholder="hh:mm" [(ngModel)]="returnTime" required>
+
+        <input type="submit" class="btn" value="Return DVD" (click)="returnDVD()">
+      </form>
+    </div>
+  </div>
+</div>

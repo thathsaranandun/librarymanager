@@ -1,0 +1,42 @@
+.container{
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+
+.col{
+  padding: 1em 1.3em;
+}
+
+.typeone{
+  background: #f2f2f2;
+  color:black;
+}
+
+.typetwo{
+  background: #ffffff;
+}
+
+input.txt{
+  border: 0;
+  padding: 1em;
+  width: 80%;
+  margin-bottom: 2em;
+}
+
+input.btn{
+  border: 0;
+  display: block;
+  padding: 1em 3em;
+  background: #cc6600;
+  color: #003a61;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.item-container{
+  background: #bfbfbf;
+  padding: .5em;
+  font-weight: bold;
+  color:black;
+  cursor: pointer;
+}

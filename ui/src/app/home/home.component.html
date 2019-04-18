@@ -1,0 +1,41 @@
+
+<div class="container typetwo">
+
+  <div class="col">
+    <div class="typeone" style="padding:1em;"><p>Books ({{bookCount}})</p></div>
+  </div>
+  <div class="col">
+    <div class="typeone" style="padding:1em;"><p>DVDs ({{dvdCount}})</p></div>
+  </div>
+</div>
+<div class="container typetwo">
+
+
+  <div class="col">
+    <p style="color:black;"> CLICK on any book if you want to DELETE it from the library</p>
+    <table>
+
+      <tr class="item-container" *ngFor="let book of bookList;let i=index" (click)="removeBook(i)">
+        <td>{{book.title}}</td>
+        <td>Author(s): {{book.authors}}</td>
+        <td *ngIf="book.burrowDate=='Available'" style="background-color: #7A9437">Available</td>
+        <td *ngIf="book.burrowDate!='Available'" style="background-color: orangered">Not Available</td>
+      </tr>
+
+    </table>
+  </div>
+  <div class="col">
+    <p style="color:black;"> CLICK on any dvd if you want to DELETE it from the library</p>
+    <table>
+
+      <tr class="item-container" *ngFor="let dvd of dvdList;let i=index" (click)="removeDVD(i)"  >
+        <td>{{dvd.title}}
+        </td>
+        <td>Language:{{dvd.language}}</td>
+        <td *ngIf="dvd.burrowDate=='available'" style="background-color: #7A9437">Available</td>
+        <td *ngIf="dvd.burrowDate!='available'" style="background-color: orangered">Not Available</td>
+      </tr>
+
+    </table>
+  </div>
+</div>
