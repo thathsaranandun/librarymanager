@@ -1,3 +1,9 @@
+A web application created with an angular frontend and a play framework backend for the purpose of managing content in a library. Java Play angular Seed was used to make it easier as it has built all the routing connections betweens between the front end and the back end.
+
+
+
+
+
 [![MIT License][license-badge]][LICENSE]
 
 # Java Play Angular Seed
